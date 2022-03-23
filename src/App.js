@@ -13,7 +13,7 @@ function App() {
     return (
         <div className="App">
             <BoxColorForm addBox={addBox}/>
-            {boxes.map(box => <DisplayColoredBox box={box}/>)}
+            {boxes.map((box, index) => <DisplayColoredBox key={'box_' + index} box={box}/>)}
         </div>
     );
 }
